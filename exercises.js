@@ -35,19 +35,23 @@ factorialize(5);
 
 // Challenge 3
 
+
 function palindrome(str) {
   var removed = str.replace(/[^a-zA-Z0-9]/g, '');
  var array = [];
- array = str.split("");
-  array = str.toLowerCase();
+  array = removed.split("");
+  array = removed.toLowerCase();
+
+  console.log(array);
   
  var backwards = [];
-  backwards = str.split("");
-  backwards = str.toLowerCase();
+    backwards = removed.split("");
+    backwards.reverse();
+    backwards.join();
+    backwards.toString("");
  
-  var test = backwards.reverse();
-  console.log(test);
-  
+  console.log(backwards);
+
   if (array === backwards){
     return true;
   }
@@ -56,6 +60,8 @@ function palindrome(str) {
   }
 }
 
-palindrome("Testing");
+
+
+palindrome("Testi__Ang");
 
 // Still stuck on this. I'm making some progress though... Hopefully I can figure out how to get the method (.reverse) to work on my backwards variable...
