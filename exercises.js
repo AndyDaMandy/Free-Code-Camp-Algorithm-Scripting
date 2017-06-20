@@ -112,3 +112,22 @@ within a function. In thise case, I createda function within map which returns t
 to compare the values from largest to smallest. From there, I use map again and take my newly sorted array (test) and return the 0 value of 
 part of the array (because map looks at EACH array). This ended up being my first time doing one of these challenges so easily too!
 */
+
+
+// Challenge 6
+
+function confirmEnding(str, target) {
+  var targetTotal = target.length;
+  var check = str.substr( - targetTotal, targetTotal);
+ 
+  if (check === target){
+    return true;
+  }
+  else{
+    return false;
+  }
+  
+}
+
+confirmEnding("Bastian", "ian");
+// This was surprisingly easy. I am impressed with my solution because it seems a bit rickety. 
