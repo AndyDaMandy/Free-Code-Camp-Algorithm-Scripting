@@ -86,3 +86,29 @@ of the variable "wordLength" which isa counter for the highest value. What will 
 the loop comes across, it will take the value of of the loop. It will do this until the loop runts out ( i < array.length will run its course)
 which will then lead the final value of wordLength to be the highest value. It's actually pretty brilliant. 
 */
+
+
+
+// Challenge 5
+function largestOfFour(arr) {
+var mapped;
+var test;
+test = arr.map(function sorted(x){
+ return x.sort(function compareVal(a, b){
+    return b - a;
+  });
+});
+
+mapped = test.map(function valueZero(z){
+  return z[0];
+  });
+  
+  return mapped;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+/* I'm extremely proud of this solution. This is the first time I've ACTUALLY understood how to use map as well as how to next functions
+within a function. In thise case, I createda function within map which returns the value of x.sort which contains a function that allows me
+to compare the values from largest to smallest. From there, I use map again and take my newly sorted array (test) and return the 0 value of 
+part of the array (because map looks at EACH array). This ended up being my first time doing one of these challenges so easily too!
+*/
