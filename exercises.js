@@ -131,3 +131,23 @@ function confirmEnding(str, target) {
 
 confirmEnding("Bastian", "ian");
 // This was surprisingly easy. I am impressed with my solution because it seems a bit rickety. 
+
+// Challenge 7
+function repeatStringNumTimes(str, num) {
+ var array = [];
+  var joined;
+  
+  if (num > 0){
+    for (var i = 0; i < num; i++){
+      array.push(str);
+    } 
+  joined = array.join("");
+    return joined;
+  }
+    else {
+      return "";
+    }
+}
+
+repeatStringNumTimes("Bacon", 4);
+// This was easy with a for loop. 
