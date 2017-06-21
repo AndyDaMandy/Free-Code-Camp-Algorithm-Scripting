@@ -151,3 +151,24 @@ function repeatStringNumTimes(str, num) {
 
 repeatStringNumTimes("Bacon", 4);
 // This was easy with a for loop. 
+
+// Challenge 8
+function truncateString(str, num) {
+
+  var spliced;
+  
+  if (str.length > num && num > 3){
+    var numDown = num -3;
+    return str.substr(0, numDown) + "...";
+  }
+  else if (num >= str.length){
+    return str;
+  }
+  else if (str.length > num && num < 3){
+    return str.substr(0 , num) + "...";
+  }
+  
+}
+
+truncateString("Absolutely longer", 2);
+// Another easy one. I juse used an if else statement to check the length requirements and returned the string based on those values.
